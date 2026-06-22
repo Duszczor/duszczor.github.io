@@ -87,15 +87,6 @@ $(document).ready(function () {
     },
   );
 
-  $(".js--wp-5").waypoint(
-    function (direction) {
-      $(".js--wp-5").addClass("animated fadeInUp");
-    },
-    {
-      offset: "50%",
-    },
-  );
-
   /* Mobile nav */
   $(".js--nav-icon").click(function () {
     var nav = $(".js--main-nav");
