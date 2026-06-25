@@ -2,6 +2,15 @@
 /* BASIC SETUP */
 /* ------------------------------------------------ */
 
+@font-face {
+  font-family: "Ionicons";
+  src: url("../../vendors/fonts/ionicons.woff?v=2.0.0") format("woff"),
+       url("../../vendors/fonts/ionicons.ttf?v=2.0.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;

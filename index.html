@@ -53,7 +53,8 @@
       type="text/css"
       href="vendors/css/ionicons.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" type="text/css" href="vendors/css/animate.css" /></noscript>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="vendors/css/swiper.min.css" />
@@ -373,44 +374,56 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img
-                  src="resources/img/realization1.jpg"
-                  alt="Realizacja: Ulica 3 Maja"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
+                <picture>
+                  <source srcset="resources/img/realization1.webp" type="image/webp" />
+                  <img
+                    src="resources/img/realization1.jpg"
+                    alt="Realizacja: Ulica 3 Maja"
+                    loading="lazy"
+                    decoding="async"
+                    width="1280"
+                    height="720"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img
-                  src="resources/img/realization2.jpg"
-                  alt="Realizacja: Rondo Aleje Sienkiewicza"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
+                <picture>
+                  <source srcset="resources/img/realization2.webp" type="image/webp" />
+                  <img
+                    src="resources/img/realization2.jpg"
+                    alt="Realizacja: Rondo Aleje Sienkiewicza"
+                    loading="lazy"
+                    decoding="async"
+                    width="1280"
+                    height="720"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img
-                  src="resources/img/realization3.jpg"
-                  alt="Realizacja: BAU MIT"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
+                <picture>
+                  <source srcset="resources/img/realization3.webp" type="image/webp" />
+                  <img
+                    src="resources/img/realization3.jpg"
+                    alt="Realizacja: BAU MIT"
+                    loading="lazy"
+                    decoding="async"
+                    width="1280"
+                    height="720"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img
-                  src="resources/img/realization4.jpg"
-                  alt="Realizacja: OSIR"
-                  loading="lazy"
-                  decoding="async"
-                  width="1280"
-                  height="720"
-                />
+                <picture>
+                  <source srcset="resources/img/realization4.webp" type="image/webp" />
+                  <img
+                    src="resources/img/realization4.jpg"
+                    alt="Realizacja: OSIR"
+                    loading="lazy"
+                    decoding="async"
+                    width="1280"
+                    height="720"
+                  />
+                </picture>
               </div>
             </div>
             <div class="swiper-pagination"></div>
