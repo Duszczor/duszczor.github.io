@@ -25,6 +25,8 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -253,10 +255,15 @@ header {
   text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
+.logo-link {
+  float: left;
+  line-height: 0;
+  border: 0;
+}
+
 .logo {
   height: 100px;
   width: auto;
-  float: left;
   margin-top: 20px;
 }
 
@@ -352,7 +359,6 @@ nav {
 .sticky .logo {
   height: 50px;
   width: auto;
-  float: left;
   margin: 12px 0;
 }
 
