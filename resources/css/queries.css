@@ -68,7 +68,7 @@
 
   .col {
     width: 100%;
-    margin: 0 0 4% 1.6%;
+    margin: 0 0 4% 0;
   }
 
   .section-offert .box,
@@ -120,7 +120,7 @@
   }
 
   .col:first-child {
-    margin: 0 0 4% 1.6%;
+    margin: 0 0 4% 0;
   }
 
   .main-nav {

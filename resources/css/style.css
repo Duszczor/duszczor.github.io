@@ -683,14 +683,28 @@ footer {
   font-size: 80%;
 }
 
+footer .row:first-child {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+footer .row:first-child > .col {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+
+footer .row:first-child > .col:first-child {
+  flex: 1;
+}
+
 .footer-nav {
   list-style: none;
-  float: left;
 }
 
 .social-links {
   list-style: none;
-  float: right;
 }
 
 .footer-nav li,
