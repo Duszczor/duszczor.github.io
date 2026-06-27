@@ -2,15 +2,19 @@ $(document).ready(function () {
   $(".js--section-offert").waypoint(
     function (direction) {
       if (direction == "down") {
-        $("nav").addClass("sticky");
+        $("header nav").addClass("sticky");
       } else {
-        $("nav").removeClass("sticky");
+        $("header nav").removeClass("sticky");
       }
     },
     {
       offset: "60px",
     },
   );
+
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    document.querySelector(".mobile-nav-details").removeAttribute("open");
+  }
 
   document.querySelectorAll(".mobile-nav-details .main-nav a").forEach(function (link) {
     link.addEventListener("click", function () {
