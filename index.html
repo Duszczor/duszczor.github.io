@@ -12,12 +12,15 @@
       content="default-src 'self'; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://maps.google.com; child-src https://www.google.com https://maps.google.com; frame-ancestors 'none';"
     />
     <meta name="robots" content="index,follow" />
-    <meta name="keywords" content="geodezja Łowicz, usługi geodezyjne Łowicz, wyceny nieruchomości Łowicz, rzeczoznawca majątkowy Łowicz, podziały nieruchomości, tyczenie budynków, inwentaryzacja budynków, mapy do celów projektowych, operat szacunkowy" />
+    <meta
+      name="keywords"
+      content="geodezja Łowicz, usługi geodezyjne Łowicz, wyceny nieruchomości Łowicz, rzeczoznawca majątkowy Łowicz, podziały nieruchomości, tyczenie budynków, inwentaryzacja budynków, mapy do celów projektowych, operat szacunkowy"
+    />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="MAWO Łowicz | Usługi geodezyjne i wyceny nieruchomości"
+      content="Usługi geodezyjne i wyceny nieruchomości | MAWO Łowicz "
     />
     <meta
       property="og:description"
@@ -45,7 +48,12 @@
       name="twitter:image"
       content="https://duszczor.github.io/resources/img/mawoLogo.jpg"
     />
-    <link rel="preload" as="image" href="resources/css/img/background.jpg" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="resources/css/img/background.jpg"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link
@@ -53,8 +61,6 @@
       type="text/css"
       href="vendors/css/ionicons.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" type="text/css" href="vendors/css/animate.css" /></noscript>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="vendors/css/swiper.min.css" />
@@ -141,7 +147,14 @@
         ],
         "areaServed": "Powiat łowicki",
         "foundingDate": "1996",
-        "knowsAbout": ["Geodesy", "Real Estate Appraisal", "Land Surveying", "Geodezja", "Wycena nieruchomości", "Pomiary geodezyjne"],
+        "knowsAbout": [
+          "Geodesy",
+          "Real Estate Appraisal",
+          "Land Surveying",
+          "Geodezja",
+          "Wycena nieruchomości",
+          "Pomiary geodezyjne"
+        ],
         "priceRange": "PLN"
       }
     </script>
@@ -151,7 +164,11 @@
     <header id="main">
       <nav>
         <div class="row">
-          <a href="#main" class="logo-link" aria-label="Przejdź do początku strony">
+          <a
+            href="#main"
+            class="logo-link"
+            aria-label="Przejdź do początku strony"
+          >
             <img
               src="resources/img/mawoLogo.jpg"
               alt="Logo firmy MAWO"
@@ -160,22 +177,19 @@
               height="160"
             />
           </a>
-          <button
-            class="mobile-nav-icon js--nav-icon"
-            type="button"
-            aria-label="Otwórz menu"
-            aria-controls="main-nav"
-            aria-expanded="false"
-          >
-            <i class="ion-navicon-round" aria-hidden="true"></i>
-          </button>
-          <ul class="main-nav js--main-nav" id="main-nav">
-            <li><a href="#onas">O nas</a></li>
-            <li><a href="#geodesy">Usługi geodezyjne</a></li>
-            <li><a href="#appraisals">Wyceny nieruchomości</a></li>
-            <li><a href="#realizations">Realizacje</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
+          <details class="mobile-nav-details">
+            <summary class="mobile-nav-icon" aria-label="Otwórz menu">
+              <i class="ion-navicon-round" aria-hidden="true"></i>
+              <i class="ion-close-round" aria-hidden="true"></i>
+            </summary>
+            <ul class="main-nav" id="main-nav">
+              <li><a href="#onas">O nas</a></li>
+              <li><a href="#geodesy">Usługi geodezyjne</a></li>
+              <li><a href="#appraisals">Wyceny nieruchomości</a></li>
+              <li><a href="#realizations">Realizacje</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
+          </details>
         </div>
       </nav>
 
@@ -375,7 +389,10 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <picture>
-                  <source srcset="resources/img/realization1.webp" type="image/webp" />
+                  <source
+                    srcset="resources/img/realization1.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="resources/img/realization1.jpg"
                     alt="Realizacja: Ulica 3 Maja"
@@ -388,7 +405,10 @@
               </div>
               <div class="swiper-slide">
                 <picture>
-                  <source srcset="resources/img/realization2.webp" type="image/webp" />
+                  <source
+                    srcset="resources/img/realization2.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="resources/img/realization2.jpg"
                     alt="Realizacja: Rondo Aleje Sienkiewicza"
@@ -401,7 +421,10 @@
               </div>
               <div class="swiper-slide">
                 <picture>
-                  <source srcset="resources/img/realization3.webp" type="image/webp" />
+                  <source
+                    srcset="resources/img/realization3.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="resources/img/realization3.jpg"
                     alt="Realizacja: BAU MIT"
@@ -414,7 +437,10 @@
               </div>
               <div class="swiper-slide">
                 <picture>
-                  <source srcset="resources/img/realization4.webp" type="image/webp" />
+                  <source
+                    srcset="resources/img/realization4.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="resources/img/realization4.jpg"
                     alt="Realizacja: OSIR"

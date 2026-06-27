@@ -123,18 +123,27 @@
     margin: 0 0 4% 0;
   }
 
-  .main-nav {
-    display: none;
-  }
-
   .mobile-nav-icon {
-    display: inline-block;
+    display: block;
   }
 
-  .main-nav {
+  .mobile-nav-details > .main-nav {
+    display: block;
     float: left;
     margin-top: 30px;
     margin-left: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .mobile-nav-details[open] > .main-nav {
+    max-height: 400px;
+  }
+
+  header:has(.mobile-nav-details[open]) .hero-text-box {
+    margin-top: 180px;
+    transition: margin-top 0.2s ease-out;
   }
 
   .main-nav li {
