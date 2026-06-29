@@ -24,6 +24,7 @@
 @use 'legacy';
 
 // ④ Migrated sections (extracted from _legacy.scss, ordered by page layout)
-@use 'hero';    // refactor(scss): extract hero section to _hero.scss
-@use 'nav';     // refactor(scss): extract navigation to _nav.scss
-@use 'footer';  // refactor(scss): extract footer to _footer.scss
+@use 'hero';              // refactor(scss): extract hero section to _hero.scss
+@use 'nav';               // refactor(scss): extract navigation to _nav.scss
+@use 'sections/offert';   // refactor(scss): extract offert section
+@use 'footer';            // refactor(scss): extract footer to _footer.scss

@@ -19,46 +19,7 @@
 // nav, .main-nav, .mobile-nav-icon, .mobile-nav-details,
 // @keyframes slideDown, .sticky → przeniesione do _nav.scss
 
-/* ------------------------------------------------ */
-/* OFERTA */
-/* ------------------------------------------------ */
-
-.section-offert .long-copy {
-  margin-bottom: 30px;
-}
-
-.icon img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 15px;
-  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(90%);
-  transition: filter 0.3s, transform 0.3s;
-}
-
-.section-offert .box.icon:hover img {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(72%);
-  transform: scale(1.1);
-}
-
-.section-offert .box,
-.section-geodesy .box,
-.section-appraisals .col > div,
-.section-contact .col {
-  background: var(--color-card);
-  border: 1px solid rgba(237, 220, 200, 0.8);
-  border-radius: 18px;
-  box-shadow: 0 16px 30px rgba(18, 49, 59, 0.08);
-}
-
-.section-offert .box,
-.section-geodesy .box,
-.section-contact .col {
-  padding: 24px;
-}
-
-.section-appraisals .col > div {
-  padding: 26px;
-}
+// .section-offert, .icon img, .box.icon:hover, karty (.box/.col) → przeniesione do sections/_offert.scss
 
 /* ------------------------------------------------ */
 /* O NAS */

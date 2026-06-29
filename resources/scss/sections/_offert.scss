@@ -1,0 +1,55 @@
+// ============================================================
+// SEKCJA OFERTA
+// ============================================================
+// Dwa kafelki (.box.icon) z ikonami SVG.
+// Ikony są pokolorowane przez CSS filter (czarny SVG → pomarańczowy).
+// Wspólny styl kart (.box) jest w tym pliku bo dotyczy kilku sekcji.
+// ============================================================
+
+.section-offert {
+  background-color: transparent;
+
+  .long-copy {
+    margin-bottom: 30px;
+  }
+}
+
+// Ikony SVG/PNG w kafelkach oferty
+// filter: konwertuje czarny obraz na kolor var(--color-brand) (#e67e22)
+// Wartości filter obliczone matematycznie dla tego konkretnego koloru
+.icon img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(90%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+// Hover: ikona ciemnieje (symulacja var(--color-brand-dark)) + powiększa się
+// .box.icon — selektor bez spacji = oba class na TYM SAMYM elemencie
+.section-offert .box.icon:hover img {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(72%);
+  transform: scale(1.1);
+}
+
+// ── Wspólny styl kart (używany w kilku sekcjach) ──────────────
+// Grupowanie selektorów z różnych sekcji w jednym miejscu
+.section-offert .box,
+.section-geodesy .box,
+.section-appraisals .col > div,
+.section-contact .col {
+  background: var(--color-card);
+  border: 1px solid rgba(237, 220, 200, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(18, 49, 59, 0.08);
+}
+
+.section-offert .box,
+.section-geodesy .box,
+.section-contact .col {
+  padding: 24px;
+}
+
+.section-appraisals .col > div {
+  padding: 26px;
+}
