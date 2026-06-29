@@ -43,16 +43,11 @@ body {
     var(--color-bg);
 }
 
-// clearfix: stary trick dla elementów float (grid.css używa float)
-// :after tworzy pseudoelement za kontenerem, który "zamknąć" floaty
+// clearfix: zamknięcie floatów przez pseudoelement ::after
 .clearfix {
-  zoom: 1; // IE6/7 hack (można usunąć)
-
-  &:after {
-    content: ".";
-    clear: both;
+  &::after {
+    content: "";
     display: block;
-    height: 0;
-    visibility: hidden;
+    clear: both;
   }
 }

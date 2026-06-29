@@ -16,19 +16,24 @@
 
 // Ikony SVG/PNG w kafelkach oferty
 // filter: konwertuje czarny obraz na kolor var(--color-brand) (#e67e22)
-// Wartości filter obliczone matematycznie dla tego konkretnego koloru
+// Wartości obliczone matematycznie — wspólny łańcuch, tylko brightness różni stan normalny od hover
+$icon-filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg);
+
 .icon img {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
-  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(90%);
-  transition: filter 0.3s, transform 0.3s;
+  filter: #{$icon-filter} brightness(90%);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: filter 0.3s, transform 0.3s;
+  }
 }
 
-// Hover: ikona ciemnieje (symulacja var(--color-brand-dark)) + powiększa się
+// Hover: ikona ciemnieje (brightness 90% → 72%) + powiększa się
 // .box.icon — selektor bez spacji = oba class na TYM SAMYM elemencie
 .section-offert .box.icon:hover img {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(72%);
+  filter: #{$icon-filter} brightness(72%);
   transform: scale(1.1);
 }
 

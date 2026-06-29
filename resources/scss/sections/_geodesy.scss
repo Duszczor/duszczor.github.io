@@ -7,12 +7,6 @@
 // ============================================================
 
 .section-geodesy {
-  img {
-    width: 140px;
-    margin-right: 32px;
-    float: left;
-  }
-
   p {
     text-align: left;
   }
@@ -30,9 +24,12 @@
   font-size: 320%;
   display: block;
   margin-bottom: 20px;
-  transition:
-    color 0.3s,
-    transform 0.3s;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      color 0.3s,
+      transform 0.3s;
+  }
 }
 
 // ── Sekcja pod geodezją (ciemne tło, wyróżnik) ───────────────
