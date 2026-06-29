@@ -34,4 +34,5 @@
 @use 'sections/realizations';   // refactor(scss): extract realizations section
 @use 'sections/contact';        // refactor(scss): extract contact section
 @use 'swiper';            // refactor(scss): extract swiper overrides to _swiper.scss
+@use 'animations';        // refactor(scss): extract all animations to _animations.scss
 @use 'footer';            // refactor(scss): extract footer to _footer.scss

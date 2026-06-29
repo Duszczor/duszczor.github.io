@@ -1,0 +1,105 @@
+// ============================================================
+// ANIMACJE
+// ============================================================
+// Dwa bloki:
+//   1. prefers-reduced-motion: no-preference — pełne animacje
+//   2. prefers-reduced-motion: reduce        — wyłączone (dostępność)
+//
+// Hero: animacje przy wejściu na stronę (page load)
+// Scroll: animacje triggerowane przez animation-timeline: view()
+//         (nowoczesny CSS, bez JS — tylko Chrome/Edge 115+)
+// ============================================================
+
+@media (prefers-reduced-motion: no-preference) {
+
+  // ── Animacje wejścia Hero ─────────────────────────────────
+
+  // Tło lekko opada (background-position drift)
+  @keyframes hero-bg-settle {
+    from { background-position: center 54%; }
+    to   { background-position: center 50%; }
+  }
+
+  // Nawigacja wjeżdża z góry
+  @keyframes hero-nav-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  // Elementy tekstowe wjeżdżają z dołu
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header {
+    animation: hero-bg-settle 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  nav {
+    animation: hero-nav-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+  }
+
+  .hero-text-box {
+    h1 {
+      animation: hero-fade-up 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    }
+
+    // nth-child(2) = pierwszy przycisk, nth-child(3) = drugi przycisk
+    // stagger: różnica 0.18s między przyciskami
+    .btn:nth-child(2) {
+      animation: hero-fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.72s both;
+    }
+
+    .btn:nth-child(3) {
+      animation: hero-fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.90s both;
+    }
+  }
+
+  // ── Animacje scroll-triggered ────────────────────────────
+  // animation-timeline: view() = animacja triggerowana gdy element wchodzi w viewport
+  // animation-range: entry 0% cover 25% = gra przez pierwsze 25% czasu widoczności
+
+  @keyframes wp-fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes wp-fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes wp-pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.05); }
+  }
+
+  .js--wp-1,
+  .js--wp-3 {
+    animation: wp-fadeIn 0.8s forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+
+  .js--wp-2 {
+    animation: wp-fadeInUp 0.8s forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+
+  .js--wp-4 {
+    animation: wp-pulse 1s forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+}
+
+// Użytkownicy z ustawioną preferencją redukcji ruchu (system OS)
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
