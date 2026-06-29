@@ -29,5 +29,8 @@
 @use 'sections/offert';   // refactor(scss): extract offert section
 @use 'sections/about';    // refactor(scss): extract about/steps section
 @use 'sections/geodesy';      // refactor(scss): extract geodesy section
-@use 'sections/appraisals';   // refactor(scss): extract appraisals section
+@use 'sections/appraisals';     // refactor(scss): extract appraisals section
+@use 'sections/trust';          // refactor(scss): extract trust section
+@use 'sections/realizations';   // refactor(scss): extract realizations section
+@use 'sections/contact';        // refactor(scss): extract contact section
 @use 'footer';            // refactor(scss): extract footer to _footer.scss

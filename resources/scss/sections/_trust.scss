@@ -1,0 +1,70 @@
+// ============================================================
+// SEKCJA WIARYGODNOŚĆ (Trust)
+// ============================================================
+// Karty z ikonami i tekstem. Hover: unoszą się w górę.
+// Flexbox w .row:last-child wyrównuje wysokości kart.
+// ============================================================
+
+.section-trust {
+  background: linear-gradient(180deg, #fafbfc, #f5f7fa);
+  padding: 100px 0 80px;
+
+  .row {
+    &:first-child {
+      margin-bottom: 60px;
+    }
+
+    // Flexbox = wszystkie karty tej samej wysokości
+    &:last-child {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+}
+
+// Karta wiarygodności
+.trust-card {
+  background: var(--color-card);
+  border: 2px solid rgba(230, 126, 34, 0.15);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column; // pozwala na flex-grow wewnątrz
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+
+  // Oryginalne CSS miało dwie osobne reguły .trust-card p — w SCSS łączymy je w jedną
+  p {
+    flex-grow: 1;
+    font-size: 90%;
+    line-height: 160%;
+    color: #555;
+  }
+
+  h3 {
+    font-size: 120%;
+    margin-bottom: 18px;
+    color: #143a46;
+  }
+
+  // Hover: karta unosi się w górę
+  &:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-brand);
+    box-shadow: 0 20px 40px rgba(18, 49, 59, 0.12);
+  }
+}
+
+.trust-icon {
+  margin-bottom: 20px;
+
+  .icon-big {
+    color: var(--color-brand);
+    font-size: 380%;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,40 @@
+// ============================================================
+// SEKCJA REALIZACJE — slider Swiper
+// ============================================================
+// Slider używa biblioteki Swiper.js (vendors/js/swiper.min.js).
+// Tu są tylko nasze nadpisania stylów Swipera.
+// Efekt hover na zdjęciach: zoom-out + pełna jasność.
+// ============================================================
+
+.section-realizations {
+  background: linear-gradient(180deg, #f8f8f8, #f1f1f1);
+  background-color: #f2f2f2; // fallback
+
+  h4 {
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+// Kontener zdjęcia z efektem overflow hidden (dla zoom)
+.realization-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000; // widoczne podczas transition (ciemny flash)
+
+  img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); // domyślnie przybliżone
+    transition:
+      transform 0.5s,
+      opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.03); // zoom-out na hover
+    }
+  }
+}
