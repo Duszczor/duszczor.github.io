@@ -1,0 +1,53 @@
+// ============================================================
+// SEKCJA WYCENY NIERUCHOMOŚCI
+// ============================================================
+// Dwa kafelki ułożone przez flexbox (appraisals-tiles).
+// h3 jest WEWNĄTRZ karty (.appraisals-list) — to ważne!
+// Wcześniej był poza kartą i powodował asymetrię układu.
+// ============================================================
+
+.section-appraisals {
+  background-color: transparent;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+// Flexbox row — wyrównuje obie karty do tej samej wysokości
+// gap zastępuje margin-left z float-based gridu
+.appraisals-tiles {
+  display: flex;
+  align-items: stretch;
+  gap: 1.6%;
+
+  // Resetuje floaty z grid.css dla tych kolumn
+  .col {
+    float: none;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Karta wypełnia całą wysokość kolumny (flex: 1 = zajmij wolne miejsce)
+  .appraisals-list {
+    flex: 1;
+  }
+}
+
+// Lista wewnątrz karty
+.appraisals-list {
+  ul {
+    margin-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+}

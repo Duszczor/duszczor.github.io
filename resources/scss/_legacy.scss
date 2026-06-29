@@ -27,44 +27,7 @@
 
 // .section-geodesy, .geodesy-icon, .section-geodesy-down → przeniesione do sections/_geodesy.scss
 
-/* ------------------------------------------------ */
-/* WYCENY NIERUCHOMOŚCI */
-/* ------------------------------------------------ */
-
-.section-appraisals h3 {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.appraisals-tiles {
-  display: flex;
-  align-items: stretch;
-  gap: 1.6%;
-}
-
-.appraisals-tiles .col {
-  float: none;
-  margin-left: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.appraisals-tiles .appraisals-list {
-  flex: 1;
-}
-
-.section-appraisals p {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.appraisals-list ul {
-  margin-left: 24px;
-}
-
-.appraisals-list li {
-  margin-bottom: 8px;
-}
+// .section-appraisals, .appraisals-tiles, .appraisals-list → przeniesione do sections/_appraisals.scss
 
 /* ------------------------------------------------ */
 /* REALIZATIONS */
