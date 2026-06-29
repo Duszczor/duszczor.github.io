@@ -71,6 +71,10 @@
     margin: 0 0 4% 0;
   }
 
+  .appraisals-tiles {
+    display: block;
+  }
+
   .section-offert .box,
   .section-geodesy .box,
   .section-contact .col,

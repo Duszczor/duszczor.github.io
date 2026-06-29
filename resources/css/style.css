@@ -400,6 +400,13 @@ nav {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(90%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.section-offert .box.icon:hover img {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(72%);
+  transform: scale(1.1);
 }
 
 .section-offert .box,
@@ -534,7 +541,25 @@ nav {
 /* ------------------------------------------------ */
 
 .section-appraisals h3 {
-  margin-top: 30px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.appraisals-tiles {
+  display: flex;
+  align-items: stretch;
+  gap: 1.6%;
+}
+
+.appraisals-tiles .col {
+  float: none;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.appraisals-tiles .appraisals-list {
+  flex: 1;
 }
 
 .section-appraisals p {
@@ -858,6 +883,46 @@ footer p {
 /* ------------------------------------------------ */
 
 @media (prefers-reduced-motion: no-preference) {
+
+  /* ---- Hero entry ---- */
+
+  @keyframes hero-bg-settle {
+    from { background-position: center 54%; }
+    to   { background-position: center 50%; }
+  }
+
+  @keyframes hero-nav-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header {
+    animation: hero-bg-settle 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  nav {
+    animation: hero-nav-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+  }
+
+  .hero-text-box h1 {
+    animation: hero-fade-up 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+  }
+
+  .hero-text-box .btn:nth-child(2) {
+    animation: hero-fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.72s both;
+  }
+
+  .hero-text-box .btn:nth-child(3) {
+    animation: hero-fade-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.90s both;
+  }
+
+  /* ---- Scroll-triggered ---- */
+
   @keyframes wp-fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
