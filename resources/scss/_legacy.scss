@@ -25,60 +25,7 @@
 // .section-offert/appraisals/contact background-color: transparent → przeniesione do ich własnych partiali
 // .btn-app → przeniesione do _components.scss
 
-/* ------------------------------------------------ */
-/* USŁUGI GEODEZYJNE */
-/* ------------------------------------------------ */
-
-.section-geodesy img {
-  width: 140px;
-  margin-right: 32px;
-  float: left;
-}
-
-.section-geodesy p {
-  text-align: left;
-}
-
-.geodesy-icon {
-  color: var(--color-brand);
-  font-size: 320%;
-  display: block;
-  margin-bottom: 20px;
-  transition:
-    color 0.3s,
-    transform 0.3s;
-}
-
-.section-geodesy .box:hover .geodesy-icon {
-  color: var(--color-brand-dark);
-  transform: scale(1.1);
-}
-
-/* ------------------------------------------------ */
-/* PONIŻEJ USŁUG GEODEJNYCH */
-/* ------------------------------------------------ */
-
-.section-geodesy-down {
-  background-image:
-    linear-gradient(rgba(15, 54, 67, 0.92), rgba(15, 54, 67, 0.92)),
-    url(img/back2.jpg);
-  background-size: cover;
-  color: #fff;
-  background-attachment: fixed;
-  text-align: center;
-}
-
-.section-geodesy-down h2 {
-  color: #fff;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  font-weight: 700;
-}
-
-.section-geodesy-down p {
-  margin-bottom: 30px;
-  margin-top: 20px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
+// .section-geodesy, .geodesy-icon, .section-geodesy-down → przeniesione do sections/_geodesy.scss
 
 /* ------------------------------------------------ */
 /* WYCENY NIERUCHOMOŚCI */

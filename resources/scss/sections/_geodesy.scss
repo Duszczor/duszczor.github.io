@@ -1,0 +1,60 @@
+// ============================================================
+// SEKCJA USŁUGI GEODEZYJNE
+// ============================================================
+// Górna część: 4 kafelki z ikonami ion-icon (czcionka wektorowa).
+// Dolna część (.section-geodesy-down): ciemne tło, pełna szerokość,
+//   kolejny efekt paralaksy (background-attachment: fixed).
+// ============================================================
+
+.section-geodesy {
+  img {
+    width: 140px;
+    margin-right: 32px;
+    float: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  // Hover na kafelku — ikona ciemnieje i rośnie
+  .box:hover .geodesy-icon {
+    color: var(--color-brand-dark);
+    transform: scale(1.1);
+  }
+}
+
+// Ikony ionicons (font-based, kolorowane przez CSS color)
+.geodesy-icon {
+  color: var(--color-brand);
+  font-size: 320%;
+  display: block;
+  margin-bottom: 20px;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+// ── Sekcja pod geodezją (ciemne tło, wyróżnik) ───────────────
+
+.section-geodesy-down {
+  background-image:
+    linear-gradient(rgba(15, 54, 67, 0.92), rgba(15, 54, 67, 0.92)),
+    url(img/back2.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  text-align: center;
+
+  h2 {
+    color: #fff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+}
