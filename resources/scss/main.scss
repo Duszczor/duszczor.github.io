@@ -15,6 +15,9 @@
 // ② Typography — nagłówki, .long-copy, .box p
 @use 'typography';
 
+// ② Components — .row, .box, ikony, linki, przyciski
+@use 'components';
+
 // ③ Legacy — original style.css piped through SCSS
 //   Sections are extracted one by one into dedicated partials below.
 //   When a section is migrated: remove it from _legacy.scss, add @use here.

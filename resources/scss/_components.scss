@@ -1,0 +1,148 @@
+// ============================================================
+// KOMPONENTY — elementy wielokrotnego użytku
+// ============================================================
+// Tutaj: .row (siatka), .box, ikony, linki globalne, przyciski
+// Wszystko co pojawia się w więcej niż jednej sekcji.
+// ============================================================
+
+// Kontener treści — wyśrodkowany, max 1140px szerokości
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+// Ogólny padding sekcji
+section {
+  padding: 80px 0;
+}
+
+// Karta/kafelek — padding i wyrównanie tekstu
+.box {
+  padding: 1%;
+  text-align: center;
+}
+
+// ── Ikony ────────────────────────────────────────────────────
+
+// Duże ikony (ionicons) np. w sekcji Trust
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+// Małe ikony obok tekstu (lista kontaktów itp.)
+// vertical-align + line-height: wyrównuje ikonę z tekstem
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+// ── Linki globalne ────────────────────────────────────────────
+
+a {
+  &:link,
+  &:visited {
+    color: var(--color-brand);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--color-brand);
+    transition:
+      border-bottom 0.2s,
+      color 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+// Fokus klawiatury — dostępność (a11y)
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e67e22;
+  outline-offset: 3px;
+}
+
+// ── Przyciski ────────────────────────────────────────────────
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 12px 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 200px;
+    letter-spacing: 0.3px;
+    transition:
+      background-color 0.2s,
+      border 0.2s,
+      color 0.2s,
+      transform 0.2s,
+      box-shadow 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-brand-dark);
+    transform: translateY(-2px);
+  }
+}
+
+// Przycisk wypełniony (CTA główny)
+.btn-full {
+  &:link,
+  &:visited {
+    background: linear-gradient(120deg, #e67e22, #f19a4b);
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+    box-shadow: 0 10px 24px rgba(230, 126, 34, 0.35);
+  }
+
+  &:hover,
+  &:active {
+    border: 1px solid var(--color-brand-dark);
+    box-shadow: 0 14px 26px rgba(230, 126, 34, 0.36);
+  }
+}
+
+// Przycisk z obramowaniem (ghost)
+.btn-ghost {
+  &:link,
+  &:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+  }
+
+  &:hover,
+  &:active {
+    border: 1px solid var(--color-brand-dark);
+    color: #fff;
+  }
+}
+
+// Przycisk-obrazek (nieużywany aktywnie, legacy)
+.btn-app {
+  &:link,
+  &:visited {
+    border: 0;
+  }
+
+  img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+  }
+}
