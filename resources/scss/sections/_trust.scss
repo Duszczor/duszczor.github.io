@@ -42,13 +42,13 @@
     flex-grow: 1;
     font-size: 90%;
     line-height: 160%;
-    color: #555;
+    color: var(--color-text-muted);
   }
 
   h3 {
     font-size: 120%;
     margin-bottom: 18px;
-    color: #143a46;
+    color: var(--color-heading);
   }
 
   // Hover: karta unosi się w górę

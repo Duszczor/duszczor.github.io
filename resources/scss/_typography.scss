@@ -29,13 +29,13 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: 1px;
-  color: #143a46;
+  color: var(--color-heading);
 
-  // Pomarańczowa linia pod każdym h2 (pseudo-element :after)
-  &:after {
+  // Pomarańczowa linia pod każdym h2 (pseudo-element ::after)
+  &::after {
     display: block;
     height: 3px;
-    background: linear-gradient(90deg, #e67e22, #f1a45e);
+    background: linear-gradient(90deg, var(--color-brand), var(--color-brand-light));
     content: " ";
     width: 110px;
     margin: 0 auto;

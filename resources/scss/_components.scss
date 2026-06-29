@@ -28,7 +28,7 @@ section {
 .icon-big {
   font-size: 350%;
   display: block;
-  color: #e67e22;
+  color: var(--color-brand);
   margin-bottom: 10px;
 }
 
@@ -38,7 +38,7 @@ section {
   display: inline-block;
   width: 30px;
   text-align: center;
-  color: #e67e22;
+  color: var(--color-brand);
   font-size: 120%;
   margin-right: 10px;
   line-height: 120%;
@@ -62,7 +62,7 @@ a {
 
   &:hover,
   &:active {
-    color: #555;
+    color: var(--color-text-muted);
     border-bottom: 1px solid transparent;
   }
 }
@@ -70,7 +70,7 @@ a {
 // Fokus klawiatury — dostępność (a11y)
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #e67e22;
+  outline: 3px solid var(--color-brand);
   outline-offset: 3px;
 }
 
@@ -104,8 +104,8 @@ button:focus-visible {
 .btn-full {
   &:link,
   &:visited {
-    background: linear-gradient(120deg, #e67e22, #f19a4b);
-    border: 1px solid #e67e22;
+    background: linear-gradient(120deg, var(--color-brand), var(--color-brand-light));
+    border: 1px solid var(--color-brand);
     color: #fff;
     margin-right: 15px;
     box-shadow: 0 10px 24px rgba(230, 126, 34, 0.35);
@@ -122,8 +122,8 @@ button:focus-visible {
 .btn-ghost {
   &:link,
   &:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+    border: 1px solid var(--color-brand);
+    color: var(--color-brand);
   }
 
   &:hover,

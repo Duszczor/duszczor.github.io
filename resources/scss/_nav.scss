@@ -50,7 +50,7 @@ nav {
 
       &:hover,
       &:active {
-        border-bottom: 2px solid #e67e22;
+        border-bottom: 2px solid var(--color-brand);
       }
     }
   }
