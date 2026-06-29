@@ -27,4 +27,5 @@
 @use 'hero';              // refactor(scss): extract hero section to _hero.scss
 @use 'nav';               // refactor(scss): extract navigation to _nav.scss
 @use 'sections/offert';   // refactor(scss): extract offert section
+@use 'sections/about';    // refactor(scss): extract about/steps section
 @use 'footer';            // refactor(scss): extract footer to _footer.scss

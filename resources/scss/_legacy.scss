@@ -21,57 +21,9 @@
 
 // .section-offert, .icon img, .box.icon:hover, karty (.box/.col) → przeniesione do sections/_offert.scss
 
-/* ------------------------------------------------ */
-/* O NAS */
-/* ------------------------------------------------ */
-
-.section-offert,
-.section-appraisals,
-.section-contact {
-  background-color: transparent;
-}
-
-.section-steps,
-.section-realizations {
-  background: linear-gradient(180deg, #f8f8f8, #f1f1f1);
-}
-
-.steps-box:first-child {
-  text-align: center;
-  padding-right: 0;
-  margin-top: 30px;
-}
-
-.steps-box:last-child {
-  padding-left: 3%;
-  margin-top: 40px;
-}
-
-.mawo-logo {
-  width: 90%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.works-step {
-  margin-bottom: 15px;
-}
-
-.works-step:last-of-type {
-  margin-bottom: 80px;
-}
-
-.btn-app:link,
-.btn-app:visited {
-  border: 0;
-}
-
-.btn-app img {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
+// .section-steps, .steps-box, .mawo-logo, .works-step → przeniesione do sections/_about.scss
+// .section-offert/appraisals/contact background-color: transparent → przeniesione do ich własnych partiali
+// .btn-app → przeniesione do _components.scss
 
 /* ------------------------------------------------ */
 /* USŁUGI GEODEZYJNE */
