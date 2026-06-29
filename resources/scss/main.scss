@@ -28,3 +28,7 @@
 @use 'swiper';        // nadpisania Swiper.js (bez vendor prefixów)
 @use 'animations';    // @keyframes + hero entry + scroll-triggered
 @use 'footer';        // footer, .footer-nav, .social-links, .ion-social-*
+
+// ── Responsywność — ZAWSZE na końcu (nadpisują desktop-first styles) ──
+// _queries.scss używa $bp-* z _variables.scss (@use 'variables' as *)
+@use 'queries';
