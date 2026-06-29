@@ -1,0 +1,90 @@
+// ============================================================
+// FOOTER
+// ============================================================
+// Ciemne tło, linki nawigacyjne + social media.
+// Flexbox w .row:first-child = logo po lewej, nav po prawej.
+// ============================================================
+
+footer {
+  background: linear-gradient(145deg, #163946, #0f2932);
+  padding: 56px 50px;
+  font-size: 80%;
+
+  .row:first-child {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    // Każda kolumna stopki — nie float, nie stała szerokość
+    > .col {
+      float: none;
+      width: auto;
+      margin: 0;
+
+      // Pierwsza kolumna (logo/info) zajmuje wolne miejsce
+      &:first-child {
+        flex: 1;
+      }
+    }
+  }
+
+  p {
+    color: #b7c8cf;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+// ── Linki stopki i social media ───────────────────────────────
+
+.footer-nav,
+.social-links {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-nav li a,
+.social-links li a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border: 0;
+    color: #d2dde2;
+    transition: color 0.2s;
+  }
+}
+
+.footer-nav li a {
+  &:hover,
+  &:active {
+    color: #ddd;
+  }
+}
+
+.social-links li a {
+  &:link,
+  &:visited {
+    font-size: 160%; // większe ikony social
+  }
+}
+
+// Kolory marki dla każdej platformy
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+  transition: color 0.2s;
+}
+
+.ion-social-facebook:hover    { color: #3b5998; }
+.ion-social-twitter:hover     { color: #00aced; }
+.ion-social-googleplus:hover  { color: #dd4b39; }
+.ion-social-instagram:hover   { color: #517fa4; }
