@@ -1,0 +1,70 @@
+// ============================================================
+// TYPOGRAFIA — nagłówki, akapity, klasy tekstowe
+// ============================================================
+// font-size używa % bo bazuje na 20px zdefiniowanym w html {}
+// 180% × 20px = 36px, 130% × 20px = 26px, itd.
+// ============================================================
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;          // biały — h1 zawsze na ciemnym tle (hero)
+  font-size: 250%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #143a46;
+
+  // Pomarańczowa linia pod każdym h2 (pseudo-element :after)
+  &:after {
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #e67e22, #f1a45e);
+    content: " ";
+    width: 110px;
+    margin: 0 auto;
+    margin-top: 24px;
+    border-radius: 999px;
+  }
+}
+
+h3 {
+  font-size: 130%;
+  margin-bottom: 25px;
+}
+
+h4 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+// Długi blok tekstu — węższy, wyśrodkowany
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+// Tekst wewnątrz kart (.box)
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}

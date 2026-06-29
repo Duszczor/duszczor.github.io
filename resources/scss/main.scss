@@ -12,6 +12,9 @@
 // ② Base — @font-face, reset, html, body
 @use 'base';
 
+// ② Typography — nagłówki, .long-copy, .box p
+@use 'typography';
+
 // ③ Legacy — original style.css piped through SCSS
 //   Sections are extracted one by one into dedicated partials below.
 //   When a section is migrated: remove it from _legacy.scss, add @use here.
