@@ -1,0 +1,37 @@
+// ============================================================
+// GRID — float-based column system
+// ============================================================
+// Oryginał: vendors/css/grid.css (688 linii, gridy 2–12 kolumn).
+// Strona używa tylko: .col + .span-1-of-2 + .span-1-of-3.
+// Pozostałe 650+ linii to martwy CSS — zostały usunięte.
+// Responsywność (pełna szerokość) obsługuje _queries.scss ($bp-md).
+// ============================================================
+
+// Clearfix dla .row — wymagany gdy dzieci używają float: left
+.row {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+// Siatka 2-kolumnowa
+.span-1-of-2 { width: 49.2%; }
+
+// Siatka 3-kolumnowa
+.span-1-of-3 { width: 32.26%; }

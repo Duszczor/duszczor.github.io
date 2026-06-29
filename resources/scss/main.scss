@@ -8,7 +8,8 @@
 // ── Fundament ──────────────────────────────────────────────────
 @use 'variables';     // SCSS vars ($bp-*) + CSS custom properties (:root)
 @use 'base';          // @font-face, reset, html, body, .clearfix
-@use 'typography';    // h1–h4, h2:after, .long-copy, .box p
+@use 'grid';          // .row clearfix, .col, .span-1-of-2, .span-1-of-3
+@use 'typography';    // h1–h4, h2::after, .long-copy, .box p
 @use 'components';    // .row, .box, ikony, linki globalne, przyciski
 
 // ── Layout strony (kolejność na stronie) ───────────────────────
