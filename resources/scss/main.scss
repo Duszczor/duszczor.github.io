@@ -33,4 +33,5 @@
 @use 'sections/trust';          // refactor(scss): extract trust section
 @use 'sections/realizations';   // refactor(scss): extract realizations section
 @use 'sections/contact';        // refactor(scss): extract contact section
+@use 'swiper';            // refactor(scss): extract swiper overrides to _swiper.scss
 @use 'footer';            // refactor(scss): extract footer to _footer.scss
