@@ -1,0 +1,43 @@
+// ============================================================
+// NORMALIZE — spójność między przeglądarkami
+// ============================================================
+// Oryginał: normalize.css v3.0.2 (2014, MIT License) — 427 linii
+//
+// Z oryginału usunięto:
+//   • reguły dla IE 8/9/10/11, IE Mobile, stary Firefox/Safari
+//   • html/body margin — już w _base.scss (reset *)
+//   • HTML5 display:block (article, aside...) — wszystkie modern browsers
+//   • audio, video, canvas — nieużywane na stronie
+//   • a { background-color: transparent } — IE 10 bug fix
+//   • img { border: 0 } — IE, modern browsers nie dodają obramowania
+//   • form, input, button, select, textarea — brak formularzy w HTML
+//   • table, td, th — brak tabel w HTML
+//   • code, pre, kbd — brak bloków kodu
+//   • figure, hr, mark, abbr — nieużywane
+// ============================================================
+
+// Zapobiega automatycznemu powiększaniu tekstu przez iOS Safari
+// po zmianie orientacji (portrait → landscape) — nadal aktualny w 2024
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+// Spójność grubości bold: Safari i Chrome historycznie renderowały "bolder"
+// zamiast "bold" — ta reguła gwarantuje jednolity wynik
+b,
+strong {
+  font-weight: bold;
+}
+
+// sub i sup: bez tego indeksy górne/dolne powiększają line-height
+// i rozjeżdżają odstępy między wierszami
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }

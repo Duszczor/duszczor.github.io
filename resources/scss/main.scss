@@ -7,6 +7,7 @@
 
 // ── Fundament ──────────────────────────────────────────────────
 @use 'variables';     // SCSS vars ($bp-*) + CSS custom properties (:root)
+@use 'normalize';     // spójność między przeglądarkami (slim, bez IE)
 @use 'base';          // @font-face, reset, html, body, .clearfix
 @use 'grid';          // .row clearfix, .col, .span-1-of-2, .span-1-of-3
 @use 'typography';    // h1–h4, h2::after, .long-copy, .box p
