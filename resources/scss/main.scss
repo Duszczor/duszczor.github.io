@@ -13,3 +13,6 @@
 //   Sections are extracted one by one into dedicated partials below.
 //   When a section is migrated: remove it from _legacy.scss, add @use here.
 @use 'legacy';
+
+// ③ Migrated sections (extracted from _legacy.scss, ordered by page layout)
+@use 'nav';   // refactor(scss): extract navigation to _nav.scss

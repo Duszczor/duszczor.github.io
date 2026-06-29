@@ -1,0 +1,137 @@
+// ============================================================
+// NAV — nawigacja: desktop, mobile (hamburger), sticky
+// ============================================================
+// Struktura HTML:
+//   <header>
+//     <nav>
+//       <div class="row">
+//         <a class="logo-link"><img class="logo"></a>
+//         <details class="mobile-nav-details">
+//           <summary class="mobile-nav-icon">☰ / ✕</summary>
+//           <ul class="main-nav"><li><a>...</a></li></ul>
+//         </details>
+//       </div>
+//     </nav>
+//   </header>
+//
+// Trzy stany nawiacji:
+//   default  — przezroczysty pasek na tle hero (desktop)
+//   mobile   — hamburger + wysuwana lista (<details> bez JS)
+//   .sticky  — przyklejony do góry, JS dodaje klasę po scroll 80px
+// ============================================================
+
+nav {
+  padding-top: 10px;
+}
+
+// ── Nawigacja desktop ─────────────────────────────────────────
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 48px;
+  display: block;
+
+  li {
+    display: inline-block;
+    margin-left: 30px;
+
+    a {
+      &:link,
+      &:visited {
+        padding: 8px 0;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        border-bottom: 2px solid #e67e22;
+      }
+    }
+  }
+}
+
+// ── Nawigacja mobilna (hamburger) ─────────────────────────────
+// Używa natywnego elementu HTML <details> / <summary>
+// Brak JS — działa przez :checked/:open pseudoklasy
+
+.mobile-nav-icon {
+  float: right;
+  margin-top: 20px;
+  cursor: pointer;
+  display: none; // widoczny dopiero od breakpointu mobile
+  background: transparent;
+  border: 0;
+  padding: 0;
+  list-style: none;
+
+  // Ukryj domyślną strzałkę <details>
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  i {
+    font-size: 250%;
+    color: #fff;
+  }
+}
+
+// Przełączanie ikon hamburger ↔ X przez stan [open] na <details>
+.mobile-nav-details {
+  .ion-close-round {
+    display: none;
+  }
+
+  &[open] {
+    .ion-navicon-round { display: none; }
+    .ion-close-round   { display: inline; }
+  }
+}
+
+// ── Sticky nav (klasa dodawana przez JS po przewinięciu) ──────
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(15, 41, 50, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  animation: slideDown 0.25s ease-out;
+
+  .main-nav {
+    margin-top: 20px;
+
+    li a {
+      &:link,
+      &:visited {
+        padding: 16px 0;
+        color: #d2dde2;
+      }
+
+      &:hover,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    margin: 12px 0;
+  }
+}
