@@ -154,7 +154,10 @@
     margin-left: 25px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: max-height 0.2s ease-out;
+    }
   }
 
   .mobile-nav-details[open] > .main-nav {
@@ -164,7 +167,10 @@
   // Hero text box przesuwa się w dół gdy menu otwarte
   header:has(.mobile-nav-details[open]) .hero-text-box {
     margin-top: 180px;
-    transition: margin-top 0.2s ease-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: margin-top 0.2s ease-out;
+    }
   }
 
   .main-nav li {

@@ -45,7 +45,10 @@ nav {
         text-transform: uppercase;
         font-size: 90%;
         border-bottom: 2px solid transparent;
-        transition: border-bottom 0.2s;
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition: border-bottom 0.2s;
+        }
       }
 
       &:hover,

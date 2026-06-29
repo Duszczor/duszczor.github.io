@@ -55,9 +55,12 @@ a {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid var(--color-brand);
-    transition:
-      border-bottom 0.2s,
-      color 0.2s;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        border-bottom 0.2s,
+        color 0.2s;
+    }
   }
 
   &:hover,
@@ -68,10 +71,17 @@ a {
 }
 
 // Fokus klawiatury — dostępność (a11y)
-a:focus-visible,
-button:focus-visible {
+// a:focus = fallback dla Safari < 15.4 bez :focus-visible (pokazuje outline przy każdym fokusie)
+a:focus,
+button:focus {
   outline: 3px solid var(--color-brand);
   outline-offset: 3px;
+}
+
+// Nowoczesne przeglądarki: ukrywa outline dla kliknięć myszy, zostawia dla klawiatury
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 // ── Przyciski ────────────────────────────────────────────────
@@ -85,12 +95,15 @@ button:focus-visible {
     text-decoration: none;
     border-radius: 200px;
     letter-spacing: 0.3px;
-    transition:
-      background-color 0.2s,
-      border 0.2s,
-      color 0.2s,
-      transform 0.2s,
-      box-shadow 0.2s;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        background-color 0.2s,
+        border 0.2s,
+        color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+    }
   }
 
   &:hover,
