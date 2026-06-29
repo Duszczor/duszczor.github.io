@@ -1,0 +1,29 @@
+// ============================================================
+// ZMIENNE
+// ============================================================
+// Dwa typy zmiennych:
+//   $scss-var  — znane tylko kompilatorowi SASS (np. breakpointy w @media)
+//   --css-var  — znane przeglądarce w runtime (dostępne przez JS, :root)
+// ============================================================
+
+// ── Breakpointy (tylko SCSS — CSS custom properties nie działają w @media) ──
+$bp-xl:  1200px;   // duży tablet
+$bp-lg:  1023px;   // mały tablet
+$bp-md:   767px;   // telefon landscape / mały tablet
+$bp-sm:   480px;   // telefon portrait
+
+// ── Easing wielokrotnie powtarzany ──────────────────────────
+$ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// ── CSS custom properties (runtime) ─────────────────────────
+// Zdefiniowane tutaj żeby były w jednym miejscu.
+// Używaj ich w CSS jako var(--color-brand) itp.
+:root {
+  --color-ink:        #12313b;   // główny kolor tekstu
+  --color-ink-soft:   #3f5c66;   // łagodniejszy tekst
+  --color-brand:      #e67e22;   // pomarańczowy akcent
+  --color-brand-dark: #bd5f11;   // ciemniejszy akcent (hover)
+  --color-bg:         #f7f3ec;   // tło strony (kremowe)
+  --color-card:       #ffffff;   // tło kart/kafelek
+  --color-divider:    #eddcc8;   // linie podziału, obramowania
+}

@@ -1,0 +1,15 @@
+// Compiled to: resources/css/style.css
+// npm run sass:watch   → development (watch mode)
+// npm run sass:build   → production (compressed, no source map)
+//
+// Import order matters: each @use outputs CSS in the order it appears here.
+// ─────────────────────────────────────────────────────────────────────────
+
+// ① Design tokens — SCSS vars + CSS custom properties (:root)
+//   Must come first: other partials may reference SCSS variables
+@use 'variables';
+
+// ② Legacy — original style.css piped through SCSS
+//   Sections are extracted one by one into dedicated partials below.
+//   When a section is migrated: remove it from _legacy.scss, add @use here.
+@use 'legacy';
