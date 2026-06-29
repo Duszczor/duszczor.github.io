@@ -1,0 +1,239 @@
+// ============================================================
+// MEDIA QUERIES — responsywność
+// ============================================================
+// @use musi być PIERWSZĄ linią w pliku (przed jakimkolwiek CSS)
+// 'variables' as * = importuje $bp-xl, $bp-lg itd. bez namespace
+// ============================================================
+@use 'variables' as *;
+
+// ── ≤ 1200px — duży tablet ───────────────────────────────────
+@media only screen and (max-width: $bp-xl) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  .row {
+    padding: 0 2%;
+  }
+}
+
+// ── ≤ 1023px — mały tablet ───────────────────────────────────
+@media only screen and (max-width: $bp-lg) {
+  body {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  // Paralaksa wyłączona na tabletach (wydajność, iOS bug)
+  header,
+  .section-geodesy-down {
+    background-attachment: scroll;
+  }
+
+  .long-copy {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .steps-box {
+    margin-top: 10px;
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  .works-step {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+
+  .icon-small {
+    width: 17px;
+    margin-right: 5px;
+  }
+}
+
+// ── ≤ 767px — telefon ────────────────────────────────────────
+@media only screen and (max-width: $bp-md) {
+  body {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  .row,
+  .hero-text-box {
+    padding: 0 3%;
+  }
+
+  .iframe-map {
+    height: 320px;
+  }
+
+  // Wszystkie kolumny gridu na pełną szerokość
+  .col {
+    width: 100%;
+    margin: 0 0 4% 0;
+
+    &:first-child {
+      margin: 0 0 4% 0;
+    }
+  }
+
+  // Wyceny — flexbox wraca do bloków
+  .appraisals-tiles {
+    display: block;
+  }
+
+  // Zmniejszony padding kart
+  .section-offert .box,
+  .section-geodesy .box,
+  .section-contact .col,
+  .section-appraisals .col > div {
+    padding: 20px;
+  }
+
+  // Trust cards — wracają do pełnej szerokości
+  .trust-card {
+    padding: 28px 18px;
+    margin-bottom: 20px;
+    height: auto;
+    flex-grow: 0;
+  }
+
+  .section-trust .row:last-child {
+    display: block;
+  }
+
+  .section-trust .row:first-child {
+    margin-bottom: 40px;
+  }
+
+  // Kontakt — kolumny w bloki
+  .section-contact .row:nth-child(2) {
+    display: block;
+
+    .col {
+      display: block;
+      padding: 20px;
+    }
+
+    .contact-data p {
+      margin: 0 0 10px;
+
+      &:first-child { margin-top: 10px; }
+      &:last-child  { margin-bottom: 12px; }
+    }
+  }
+
+  .logo {
+    margin-top: 25px;
+    height: 50px;
+  }
+
+  // Hamburger menu widoczny
+  .mobile-nav-icon {
+    display: block;
+  }
+
+  // Nawigacja mobilna — wysuwana w dół
+  .mobile-nav-details > .main-nav {
+    display: block;
+    float: left;
+    margin-top: 30px;
+    margin-left: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .mobile-nav-details[open] > .main-nav {
+    max-height: 400px;
+  }
+
+  // Hero text box przesuwa się w dół gdy menu otwarte
+  header:has(.mobile-nav-details[open]) .hero-text-box {
+    margin-top: 180px;
+    transition: margin-top 0.2s ease-out;
+  }
+
+  .main-nav li {
+    display: block;
+
+    a {
+      &:link,
+      &:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+      }
+    }
+  }
+
+  .sticky {
+    .main-nav {
+      margin-top: 10px;
+
+      li a {
+        &:link,
+        &:visited {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .mobile-nav-icon {
+      margin-top: 10px;
+
+      i {
+        color: #555;
+      }
+    }
+  }
+
+  h1 { font-size: 165%; }
+  h2 { font-size: 150%; }
+
+  .long-copy {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .steps-box:first-child {
+    text-align: center;
+  }
+
+  .works-step {
+    margin-bottom: 40px;
+
+    div {
+      height: 40px;
+      width: 40px;
+      margin-right: 15px;
+      padding: 4px;
+      font-size: 120%;
+    }
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+// ── ≤ 480px — mały telefon ───────────────────────────────────
+@media only screen and (max-width: $bp-sm) {
+  section {
+    padding: 25px 0;
+  }
+}

@@ -2,37 +2,29 @@
 // npm run sass:watch   → development (watch mode)
 // npm run sass:build   → production (compressed, no source map)
 //
-// Import order matters: each @use outputs CSS in the order it appears here.
+// Import order = CSS cascade order. Each @use outputs its CSS here.
 // ─────────────────────────────────────────────────────────────────────────
 
-// ① Design tokens — SCSS vars + CSS custom properties (:root)
-//   Must come first: other partials may reference SCSS variables
-@use 'variables';
+// ── Fundament ──────────────────────────────────────────────────
+@use 'variables';     // SCSS vars ($bp-*) + CSS custom properties (:root)
+@use 'base';          // @font-face, reset, html, body, .clearfix
+@use 'typography';    // h1–h4, h2:after, .long-copy, .box p
+@use 'components';    // .row, .box, ikony, linki globalne, przyciski
 
-// ② Base — @font-face, reset, html, body
-@use 'base';
+// ── Layout strony (kolejność na stronie) ───────────────────────
+@use 'hero';          // header tło, .hero-text-box, .logo-link, .logo
+@use 'nav';           // .main-nav, .mobile-nav-icon, .sticky
 
-// ② Typography — nagłówki, .long-copy, .box p
-@use 'typography';
+// ── Sekcje treści ──────────────────────────────────────────────
+@use 'sections/offert';
+@use 'sections/about';
+@use 'sections/geodesy';
+@use 'sections/appraisals';
+@use 'sections/trust';
+@use 'sections/realizations';
+@use 'sections/contact';
 
-// ② Components — .row, .box, ikony, linki, przyciski
-@use 'components';
-
-// ③ Legacy — original style.css piped through SCSS
-//   Sections are extracted one by one into dedicated partials below.
-//   When a section is migrated: remove it from _legacy.scss, add @use here.
-@use 'legacy';
-
-// ④ Migrated sections (extracted from _legacy.scss, ordered by page layout)
-@use 'hero';              // refactor(scss): extract hero section to _hero.scss
-@use 'nav';               // refactor(scss): extract navigation to _nav.scss
-@use 'sections/offert';   // refactor(scss): extract offert section
-@use 'sections/about';    // refactor(scss): extract about/steps section
-@use 'sections/geodesy';      // refactor(scss): extract geodesy section
-@use 'sections/appraisals';     // refactor(scss): extract appraisals section
-@use 'sections/trust';          // refactor(scss): extract trust section
-@use 'sections/realizations';   // refactor(scss): extract realizations section
-@use 'sections/contact';        // refactor(scss): extract contact section
-@use 'swiper';            // refactor(scss): extract swiper overrides to _swiper.scss
-@use 'animations';        // refactor(scss): extract all animations to _animations.scss
-@use 'footer';            // refactor(scss): extract footer to _footer.scss
+// ── Moduły zewnętrzne i globalne ───────────────────────────────
+@use 'swiper';        // nadpisania Swiper.js (bez vendor prefixów)
+@use 'animations';    // @keyframes + hero entry + scroll-triggered
+@use 'footer';        // footer, .footer-nav, .social-links, .ion-social-*
