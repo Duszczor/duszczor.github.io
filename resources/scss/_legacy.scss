@@ -243,42 +243,7 @@ button:focus-visible {
   color: #fff;
 }
 
-/* ------------------------------------------------ */
-/* HEADER */
-/* ------------------------------------------------ */
-
-header {
-  background-image:
-    linear-gradient(rgba(11, 34, 44, 0.7), rgba(11, 34, 44, 0.74)),
-    url(img/background.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.hero-text-box {
-  position: absolute;
-  width: 1140px;
-  max-width: 92%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
-}
-
-.logo-link {
-  float: left;
-  line-height: 0;
-  border: 0;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  margin-top: 20px;
-}
-
+// header, .hero-text-box, .logo-link, .logo → przeniesione do _hero.scss
 // nav, .main-nav, .mobile-nav-icon, .mobile-nav-details,
 // @keyframes slideDown, .sticky → przeniesione do _nav.scss
 

@@ -1,0 +1,43 @@
+// ============================================================
+// HERO / HEADER — sekcja na całą wysokość ekranu
+// ============================================================
+// header to pełnoekranowe zdjęcie tła z ciemną nakładką.
+// .hero-text-box jest pozycjonowany absolutnie w centrum.
+// background-attachment: fixed = efekt paralaksy przy scrollu.
+// ============================================================
+
+header {
+  background-image:
+    // Ciemna nakładka (rgba) + zdjęcie tła
+    linear-gradient(rgba(11, 34, 44, 0.7), rgba(11, 34, 44, 0.74)),
+    url(img/background.jpg);      // ścieżka względem output CSS
+  background-size: cover;
+  background-position: center;
+  height: 100vh;                  // 100% wysokości okna przeglądarki
+  background-attachment: fixed;   // paralaksa (wyłączana na mobile w _queries.scss)
+}
+
+// Blok z tekstem + przyciskami — wyśrodkowany absolutnie
+// transform: translate(-50%, -50%) przesuwa element o pół jego szerokości/wysokości
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  max-width: 92%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+// Logo w nawigacji
+.logo-link {
+  float: left;
+  line-height: 0;
+  border: 0;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+}

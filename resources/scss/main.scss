@@ -15,4 +15,5 @@
 @use 'legacy';
 
 // ③ Migrated sections (extracted from _legacy.scss, ordered by page layout)
+@use 'hero';  // refactor(scss): extract hero section to _hero.scss
 @use 'nav';   // refactor(scss): extract navigation to _nav.scss
