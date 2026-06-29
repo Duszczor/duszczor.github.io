@@ -5,17 +5,6 @@
 // Zmieniaj tu tylko jeśli chcesz zmienić coś na CAŁEJ stronie.
 // ============================================================
 
-// Ładowanie czcionki ikon (Ionicons) z folderu vendors/
-// font-display: swap = tekst widoczny od razu, ikona podmieniana gdy się załaduje
-@font-face {
-  font-family: "Ionicons";
-  src: url("../../vendors/fonts/ionicons.woff?v=2.0.0") format("woff"),
-       url("../../vendors/fonts/ionicons.ttf?v=2.0.0") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 // Box-sizing: border-box oznacza że padding/border NIE powiększają elementu
 * {
   margin: 0;
