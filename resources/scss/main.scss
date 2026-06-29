@@ -9,12 +9,15 @@
 //   Must come first: other partials may reference SCSS variables
 @use 'variables';
 
-// ② Legacy — original style.css piped through SCSS
+// ② Base — @font-face, reset, html, body
+@use 'base';
+
+// ③ Legacy — original style.css piped through SCSS
 //   Sections are extracted one by one into dedicated partials below.
 //   When a section is migrated: remove it from _legacy.scss, add @use here.
 @use 'legacy';
 
-// ③ Migrated sections (extracted from _legacy.scss, ordered by page layout)
+// ④ Migrated sections (extracted from _legacy.scss, ordered by page layout)
 @use 'hero';    // refactor(scss): extract hero section to _hero.scss
 @use 'nav';     // refactor(scss): extract navigation to _nav.scss
 @use 'footer';  // refactor(scss): extract footer to _footer.scss

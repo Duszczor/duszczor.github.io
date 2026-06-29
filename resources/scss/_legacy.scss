@@ -9,60 +9,7 @@
 // Design tokens (:root) → przeniesione do _variables.scss
 // ============================================================
 
-/* ------------------------------------------------ */
-/* BASIC SETUP */
-/* ------------------------------------------------ */
-
-@font-face {
-  font-family: "Ionicons";
-  src: url("../../vendors/fonts/ionicons.woff?v=2.0.0") format("woff"),
-       url("../../vendors/fonts/ionicons.ttf?v=2.0.0") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// :root → przeniesione do _variables.scss
-
-html {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
-  font-family: "Lato", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-body {
-  line-height: 1.6;
-  background:
-    radial-gradient(
-      circle at 10% -10%,
-      rgba(230, 126, 34, 0.16),
-      transparent 42%
-    ),
-    radial-gradient(circle at 95% 20%, rgba(18, 49, 59, 0.12), transparent 36%),
-    var(--color-bg);
-}
-
-.clearfix {
-  zoom: 1;
-}
-.clearfix:after {
-  content: ".";
-  clear: both;
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
+// @font-face, *, html, body, .clearfix → przeniesione do _base.scss
 
 /* ------------------------------------------------ */
 /* REUSABLE COMPONENTS */
