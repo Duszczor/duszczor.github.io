@@ -33,7 +33,13 @@ header {
 .logo-link {
   float: left;
   line-height: 0;
-  border: 0;
+
+  // a:link ma specificity 0-1-1 i dodaje border-bottom — potrzebujemy 0-2-0 żeby wygrać
+  &:link,
+  &:visited {
+    border: 0;
+    padding-bottom: 0;
+  }
 }
 
 .logo {
