@@ -57,7 +57,7 @@ footer {
   &:visited {
     text-decoration: none;
     border: 0;
-    color: #d2dde2;
+    color: var(--color-text-inverse-muted);
     transition: color 0.2s;
   }
 }

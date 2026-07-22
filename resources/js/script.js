@@ -22,15 +22,19 @@ $(".js--section-offert").waypoint(
 
 // ── Mobile nav — zamykanie menu po kliknięciu linku ──────────────────────────
 // Na mobile <details open> = menu widoczne. removeAttribute("open") = schowanie.
+// MOBILE_BREAKPOINT musi być zsynchronizowany z $bp-md w resources/scss/_variables.scss
 
-if (window.matchMedia("(max-width: 767px)").matches) {
-  document.querySelector(".mobile-nav-details").removeAttribute("open");
+const MOBILE_BREAKPOINT = "(max-width: 767px)";
+const mobileNavDetails = document.querySelector(".mobile-nav-details");
+
+if (window.matchMedia(MOBILE_BREAKPOINT).matches) {
+  mobileNavDetails.removeAttribute("open");
 }
 
 document.querySelectorAll(".mobile-nav-details .main-nav a").forEach(function (link) {
   link.addEventListener("click", function () {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      document.querySelector(".mobile-nav-details").removeAttribute("open");
+    if (window.matchMedia(MOBILE_BREAKPOINT).matches) {
+      mobileNavDetails.removeAttribute("open");
     }
   });
 });

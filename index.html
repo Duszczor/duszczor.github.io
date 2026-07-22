@@ -7,9 +7,14 @@
       content="MAWO Łowicz: usługi geodezyjne i wyceny nieruchomości od 1996 roku. Podziały, tyczenie, inwentaryzacje, mapy i operaty szacunkowe."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      frame-ancestors, report-uri i sandbox są ignorowane, gdy CSP jest dostarczane
+      przez <meta> zamiast nagłówka HTTP — GitHub Pages nie pozwala ustawiać nagłówków,
+      więc te dyrektywy tu celowo nie występują (nie dają realnej ochrony).
+    -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://maps.google.com; child-src https://www.google.com https://maps.google.com; frame-ancestors 'none';"
+      content="default-src 'self'; script-src 'self' https://ajax.googleapis.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://maps.google.com; child-src https://www.google.com https://maps.google.com;"
     />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:type" content="website" />
@@ -601,13 +606,6 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-DCF9642RF3"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-DCF9642RF3");
-    </script>
+    <script defer src="resources/js/analytics.js"></script>
   </body>
 </html>
