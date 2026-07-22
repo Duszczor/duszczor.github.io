@@ -97,6 +97,13 @@ nav {
 }
 
 // ── Sticky nav (klasa dodawana przez JS po przewinięciu) ──────
+// Sentinel wstawiany dynamicznie przez script.js — punkt odniesienia
+// dla IntersectionObserver, sam w sobie niewidoczny (0 wysokości).
+
+.js--sticky-sentinel {
+  height: 0;
+}
+
 
 @keyframes slideDown {
   from { transform: translateY(-100%); opacity: 0; }
