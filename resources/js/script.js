@@ -29,7 +29,9 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
 document.querySelectorAll(".mobile-nav-details .main-nav a").forEach(function (link) {
   link.addEventListener("click", function () {
-    document.querySelector(".mobile-nav-details").removeAttribute("open");
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      document.querySelector(".mobile-nav-details").removeAttribute("open");
+    }
   });
 });
 
